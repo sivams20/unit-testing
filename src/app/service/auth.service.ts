@@ -15,4 +15,8 @@ export class AuthService {
     return (localStorage.getItem('user')) ? true : false;
   }
 
+  isAuthenticated(): Promise<boolean> {
+    return Promise.resolve(!!localStorage.getItem('token'));
+  }
+
 }

@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ProfileComponent } from './profile/profile.component';
+import { LoginComponent } from './login/login.component';
+import { DateFormatPipe } from './pipe/date-format.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
-    ProfileComponent
+    ProfileComponent,
+    LoginComponent,
+    DateFormatPipe
   ],
   imports: [
     BrowserModule,
