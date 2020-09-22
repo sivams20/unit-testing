@@ -7,6 +7,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { ProfileComponent } from './profile/profile.component';
 import { LoginComponent } from './login/login.component';
 import { DateFormatPipe } from './pipe/date-format.pipe';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DateFormatPipe } from './pipe/date-format.pipe';
     RegistrationComponent,
     ProfileComponent,
     LoginComponent,
-    DateFormatPipe
+    DateFormatPipe,
+    FormComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,21 @@
+<form [formGroup]="loginForm">
+
+    <h3 style="text-align:center">
+        Login Form
+    </h3>
+
+    <div>
+        <label for="email">Email</label>
+        <input type="text" id="email" formControlName="email">
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input type="text" id="password" formControlName="password">
+    </div>
+    <div>
+        <button [disabled]="loginForm.invalid" (click)="onSubmit">
+            Sign Up
+        </button>
+    </div>
+
+</form>
