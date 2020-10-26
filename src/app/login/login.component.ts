@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.authService.isAuthenticated().then((authenticated) => {
       this.needsLogin = !authenticated;
-    })
+    });
   }
 
 }
