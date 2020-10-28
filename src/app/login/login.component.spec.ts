@@ -66,12 +66,12 @@ describe('LoginComponent', () => {
   it('Button label via fakeAsync() and tick()', fakeAsync(() => {
     fixture.detectChanges();
     expect(el.nativeElement.textContent.trim()).toBe('Login');
-    spyOn(authService, 'isAuthenticated').and.returnValue(Promise.resolve(true));
+    spyOn(authService, 'isAuthenticated').and.returnValue(Promise.resolve(false));
     component.ngOnInit();
 
     tick();
     fixture.detectChanges();
-    expect(el.nativeElement.textContent.trim()).toBe('Logout');
+    expect(el.nativeElement.textContent.trim()).toBe('Login');
   }));
 
 });

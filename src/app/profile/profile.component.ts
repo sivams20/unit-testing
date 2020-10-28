@@ -13,7 +13,6 @@ export class ProfileComponent implements OnInit {
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
-
   }
 
   fetchDetails() {

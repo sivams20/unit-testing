@@ -19,7 +19,7 @@ describe('RegistrationComponent', () => {
 
   afterEach(() => {
     component = null;
-  })
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();

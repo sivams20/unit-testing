@@ -49,8 +49,6 @@ describe('ProfileComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('#message').textContent).toContain('Fetching Details');
-    // const title = fixture.debugElement.query(By.css('#message')).nativeElement;
-    // expect(title.innerHTML).toBe('Fetching Details');
   });
 
 });
