@@ -20,12 +20,25 @@ describe('ProfileComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ProfileComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
     authService = TestBed.inject(AuthService);
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should check and return "fetching details" message', () => {
+    spyOn(authService, 'checkAuthentication').and.returnValue(true);
+    expect(authService.checkAuthentication).toHaveBeenCalled;
+    component.fetchDetails();
+    expect(component.message).toBe('Fetching Details');
+  });
+
+  it('should check and return "User Not Authenticated" message', () => {
+    spyOn(authService, 'checkAuthentication').and.returnValue(false);
+    expect(authService.checkAuthentication).toHaveBeenCalled;
+    component.fetchDetails();
+    expect(component.message).toBe('User Not Authenticated');
   });
 
   it('should fetch user details', () => {
@@ -34,10 +47,10 @@ describe('ProfileComponent', () => {
     component.fetchDetails();
     expect(component.message).toBe('Fetching Details');
     fixture.detectChanges();
-    //const compiled = fixture.debugElement.nativeElement;
-    //expect(compiled.querySelector('#message').textContent).toContain('Fetching Details');
-    const title = fixture.debugElement.query(By.css('#message')).nativeElement;
-    expect(title.innerHTML).toBe('Fetching Details');
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('#message').textContent).toContain('Fetching Details');
+    // const title = fixture.debugElement.query(By.css('#message')).nativeElement;
+    // expect(title.innerHTML).toBe('Fetching Details');
   });
 
 });

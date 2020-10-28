@@ -21,16 +21,6 @@ describe('RegistrationComponent', () => {
     component = null;
   })
 
-  beforeAll(() => {
-
-  });
-
-  afterAll(() => {
-
-  });
-
-  //component = new RegistrationComponent();
-
   it('should create', () => {
     expect(component).toBeTruthy();
   });

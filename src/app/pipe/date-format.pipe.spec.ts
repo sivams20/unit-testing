@@ -1,7 +1,11 @@
 import { DateFormatPipe } from './date-format.pipe';
 
 describe('DateFormatPipe', () => {
-  const pipe = new DateFormatPipe();
+  let pipe;
+
+  beforeEach(() => {
+    pipe = new DateFormatPipe();
+  });
 
   it('create an instance', () => {
     expect(pipe).toBeTruthy();

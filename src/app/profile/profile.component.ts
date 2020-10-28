@@ -12,12 +12,12 @@ export class ProfileComponent implements OnInit {
 
   constructor(private authService: AuthService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
 
   }
 
   fetchDetails() {
-    if (this.authService.checkAuthentication) {
+    if (this.authService.checkAuthentication()) {
       this.message = 'Fetching Details';
     } else {
       this.message = 'User Not Authenticated';
