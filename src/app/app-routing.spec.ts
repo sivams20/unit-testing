@@ -5,7 +5,6 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { routes } from '../app/app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 
 describe('App routing example', () => {
   let location: Location;
@@ -15,7 +14,7 @@ describe('App routing example', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [ RouterTestingModule.withRoutes(routes) ],
-      declarations: [ HomeComponent, AppComponent ]
+      declarations: []
     });
     router = TestBed.inject(Router);
     location = TestBed.inject(Location);

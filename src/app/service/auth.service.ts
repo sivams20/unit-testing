@@ -8,11 +8,11 @@ export class AuthService {
   constructor() { }
 
   authenticate() {
-    localStorage.setItem('user', 'testUser');
+    localStorage.setItem('token', 'testUser');
   }
 
   checkAuthentication() {
-    return (localStorage.getItem('user')) ? true : false;
+    return (localStorage.getItem('token')) ? true : false;
   }
 
   isAuthenticated(): Promise<boolean> {

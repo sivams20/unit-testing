@@ -77,17 +77,6 @@ describe('CommentsService', () => {
     req.flush(postComment);
   });
 
-  // it('should test error scenario', () => {
-  //   let response: any;
-  //   let errResponse: any;
-  //   const mockErrorResponse = { status: 400, statusText: 'Bad Request' };
-  //   const data = 'Invalid request parameters';
-  //   service.fetchComments().subscribe(res => response = res, err => errResponse = err);
-  //   const req = httpTestCtrl.expectOne(service.baseUrl + 'comments');
-  //   req.flush(data, mockErrorResponse);
-  //   expect(errResponse).toBe(data);
-  // });
-
   it('throws 404 error', () => {
     service.fetchComments().subscribe(
       data => fail('Should have failed with 404 error'),

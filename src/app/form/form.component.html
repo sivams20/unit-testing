@@ -1,6 +1,6 @@
 <form [formGroup]="loginForm">
     <h3 style="text-align:center">
-        sign up Form
+        Login Form
     </h3>
     <div>
         <label for="email">Email</label>
@@ -8,11 +8,11 @@
     </div>
     <div>
         <label for="password">Password</label>
-        <input type="text" id="password" formControlName="password">
+        <input type="password" id="password" formControlName="password">
     </div>
     <div>
         <button [disabled]="loginForm.invalid" (click)="onSubmit">
-            Sign Up
+            Login
         </button>
     </div>
 </form>
