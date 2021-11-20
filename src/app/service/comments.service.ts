@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { commentModel } from '../model/comment';
-
 @Injectable({
   providedIn: 'root'
 })
+
 export class CommentsService {
 
   baseUrl = 'https://jsonplaceholder.typicode.com/';
